@@ -1,0 +1,31 @@
+<!--priceList.wxml-->
+<view class="container">
+  <view class="title">
+    <text class="name item">产品</text>
+    <text class="count item">起订量</text>
+    <text class="maketPrice item">市场价</text>
+    <text class="price item">报价</text>
+  </view>
+
+  <view class="bottomBar">
+      <text class='total'>总金额:<text class='totalFont'>{{"¥"+total}}</text></text>
+      <!-- <view class="edit" bindtap="edit">{{disableFlag? '编辑' : '完成'}}</view> -->
+      <view class="save" bindtap="toTest">生成报价单</view>
+  </view>
+
+  <scroll-view class='productList' scroll-y>
+    <view class="listItem" data-index="{{index}}"  wx:key="{{index}}"  wx:for="{{list}}" bindtouchstart="touchS" bindtouchmove="touchM">
+      <view class="itemTop  {{item.isTouchMove ? 'touch-move-active' : ''}}"   >
+        <text class="name item" bindtap='toDetails' data-id='{{item.productId}}'>{{item.productName}}</text>
+        <view class="count item">
+        <input class="input" data-type="startTotal" data-index="{{index}}" data-min="{{item.startTotal}}" bindinput="inputChange"  type="number" value='{{item.startTotal}}' placeholder="输入数量"/>
+        </view>
+        <text class="maketPrice item">{{item.marketPrice}}</text>
+        <view class="price item">
+        <input class="input" data-type="quotation" data-index="{{index}}" bindinput="inputChange" disabled="{{disableFlag ? 'disabled' : ''}}" type="digit" value='{{item.quotation}}' placeholder="输入报价"/>
+        </view>
+        <view class="del" data-trolley="{{item.trolleyId}}" bindtap="del">删除</view>
+      </view> 
+    </view>
+  </scroll-view>
+</view>

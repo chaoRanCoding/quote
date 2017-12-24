@@ -1,0 +1,21 @@
+<!--user.wxml-->
+<view class="container">
+  <view class="userInfo">
+      <image class='userImg' src="{{userImg}}"></image>
+      <text class='userName'>{{userName}}</text>
+  </view>
+  <view class="item" bindtap="toHistory">
+      <image class='icon' src="../images/form.png"></image>
+      <text class='itemName'>报价历史</text>
+      <image class='icon' src="../images/right.png"></image>
+  </view>
+  <view class="item">
+      <image class='icon' src="../images/service.png"></image>
+      <text class='itemName'>客服中心</text>
+      <contact-button class='serverBtn' type="default-dark" size="20" session-from="weapp" >
+    </contact-button>   
+  </view>
+
+</view>
+
+

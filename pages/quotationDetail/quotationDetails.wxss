@@ -1,0 +1,82 @@
+/* pages/quotationDetail/quotationDetails.wxss */
+/* priceList.wxss */
+.title .item{
+  text-align: center;
+  font-size: 30rpx;
+}
+.title .name{
+  flex:2;
+  font-size: 34rpx;
+}
+.title .maketPrice{
+  flex:1;
+}
+.title .price{
+  flex:1;
+}
+.title .count{
+  flex:1;
+}
+.productList{
+  position: fixed;
+  left: 0;
+  margin: 100rpx 0;
+  height: 100%;
+  box-sizing: border-box;
+  padding-bottom: 200rpx;
+}
+.productList .listItem{
+  padding: 20rpx 0;
+  width: 100%;
+  background-color: #fff;
+  margin-bottom: 1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.listItem .item{
+    font-size: 30rpx;
+}
+
+.name{
+  flex:2;
+  padding-left: 20rpx;
+  box-sizing: border-box;
+  text-align: left;
+}
+ .maketPrice{
+  flex:1;
+}
+ .price{
+  flex:1;
+}
+.count{
+  flex:1;
+}
+
+.bottomBar{
+  height: 100rpx;
+  width: 100%;
+  background-color: #fff;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+}
+.total{
+  flex:1;
+  font-size: 34rpx;
+  padding-left: 20rpx;
+  box-sizing: border-box;
+}
+
+
+
+.totalFont{
+  color:red;
+}

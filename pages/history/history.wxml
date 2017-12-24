@@ -1,0 +1,33 @@
+<view class="container">
+  <view class="title">
+      <view class="item">
+          日期
+      </view>
+      <view class="item">
+          数量
+      </view>
+      <view class="item">
+          金额
+      </view>
+  </view>
+
+<view class='pt'></view>
+
+<view class='historyList'>
+    <view class="history" data-index="{{index}}"  wx:key="{{index}}"  wx:for="{{list}}"  bindtouchstart="touchS" bindtouchmove="touchM">
+      <view class="itemTop {{item.isTouchMove ? 'touch-move-active' : ''}}" >
+        <view class="item" data-id="{{item.quotationCode}}"  bindtap="toList">
+            {{item.dateTime}}
+        </view>
+        <view class="item" data-id="{{item.quotationCode}}" bindtap="toList">
+            {{item.quantity}}
+        </view>
+        <view class="item" data-id="{{item.quotationCode}}" bindtap="toList">
+          {{item.totalAmount}}
+        </view>
+       
+      </view> 
+    </view>
+  </view>
+
+</view>

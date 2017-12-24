@@ -1,0 +1,23 @@
+<!--pages/quotationDetail/quotationDetails.wxml-->
+<view class="container">
+  <view class="title">
+    <text class="name item">产品</text>
+    <text class="count item">数量</text>
+    <text class="price item">报价</text>
+     <text class="price item">折扣</text>
+  </view>
+
+  <view class="bottomBar">
+      <text class='total'>总金额(含税价):<text class='totalFont'>{{"¥"+total}}</text></text>
+  </view>
+
+  <scroll-view class='productList' scroll-y>
+    <view class="listItem" data-index="{{index}}"  wx:key="{{index}}"  wx:for="{{list}}" >
+        <text class="name item">{{item.productName}}</text>
+        <view class="count item">{{item.count}}</view>
+        <view class="price item">{{item.quotation}}</view>
+        <view class="price item">{{item.marketPrice*100+"%"}}</view>
+      </view> 
+    
+  </scroll-view>
+</view>

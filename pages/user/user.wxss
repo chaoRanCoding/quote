@@ -1,0 +1,45 @@
+/* user.wxss */
+.userInfo{
+  height: 200rpx;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 30rpx;
+  box-sizing: border-box;
+  background-color: #fff;
+  margin-bottom: 1px;
+}
+
+.userImg{
+  height: 100rpx;
+  width: 100rpx;
+  border-radius: 5px;
+  background-color: #3DCAE6;
+}
+
+.userName{
+  margin-left: 50rpx;
+  font-size: 34rpx;
+}
+
+.item{
+  height: 100rpx;
+  width: 100%;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  margin-bottom: 1px;
+}
+.icon{
+  height: 40rpx;
+  width: 40rpx;
+}
+
+.itemName{
+  flex:1;
+  font-size: 34rpx;
+  padding-left: 20rpx;
+  box-sizing: border-box;
+}

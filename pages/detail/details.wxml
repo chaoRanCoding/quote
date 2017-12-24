@@ -1,0 +1,62 @@
+<!--pages/detail/details.wxml-->
+  <swiper class='swiper-box' indicator-dots="{{indicatorDots}}"
+  autoplay="{{autoplay}}" indicator-active-color="#3DCAE6" indicator-color="#eee" interval="{{interval}}" duration="{{duration}}">
+  <block wx:for="{{imgUrls}}">
+    <swiper-item>
+      <image src="{{item}}" class="slide-image" />
+    </swiper-item>
+  </block>
+</swiper>
+<view class="container">
+
+  <view class="product">
+      <view class="productLeft">
+          <view class="productName">{{product.productName}}</view>
+          <view class="productPrice">
+              单价:<view class="unitPrice">{{"¥"+product.price}}</view>
+              市场价:<text class="maketPrice">{{"¥"+product.marketPrice}}</text>
+          </view>
+      </view>
+      <view class="productRight" data-productId="{{product.productId}}" bindtap="add">
+          <image class='add' src="../images/add.png"></image>
+      </view>
+  </view>
+  <text class="infoTitle">—— 产品参数 ——</text>
+ <view class="infoItem">
+    <text class='itemName'>品牌</text>
+    <text class='itemCont'>惠充电</text>
+ </view>
+  <view class="infoItem">
+    <text class='itemName'>型号</text>
+    <text class='itemCont'>{{product.productName}}</text>
+ </view>
+  <view class="infoItem"  hidden="{{product.productVersion==''?true:false}}">
+    <text class='itemName'>版本</text>
+    <text class='itemCont'>{{product.productVersion}}</text>
+ </view>
+   <view class="infoItem"  hidden="{{product.activePower==null?true:false}}">
+    <text class='itemName'>电压</text>
+    <text class='itemCont'>{{product.activePower?product.activePower+"KW":"无"}}</text>
+ </view>
+  <view class="infoItem"  hidden="{{product.powerLine==null?true:false}}">
+    <text class='itemName'>进线</text>
+    <text class='itemCont'>{{product.powerLine==1?"单相":"三相"}}</text>
+ </view>
+  <view class="infoItem"  hidden="{{product.chargeType==null?true:false}}">
+    <text class='itemName'>充电方式</text>
+    <text class='itemCont'>{{product.chargeType==1?"直流":product.chargeType==2?"交流":"交直流"}}</text>
+ </view>
+  <view class="infoItem">
+    <text class='itemName'>起订量</text>
+    <text class='itemCont'>{{product.startTotal}}</text>
+ </view>
+  <view class="infoItem">
+    <text class='itemName'>标准配置</text>
+    <text class='itemCont'>{{product.config}}</text>
+ </view>
+  <view class="infoItem">
+    <text class='itemName'>备注</text>
+    <text class='itemCont'>{{product.comment}}</text>
+ </view>
+
+</view>

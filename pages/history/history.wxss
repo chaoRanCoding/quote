@@ -1,0 +1,59 @@
+/* history.wxss */
+.title .item{
+  flex:1;
+  text-align: center;
+}
+.pt{
+  height: 100rpx;
+  width: 100%;
+  background-color: #fff;
+}
+
+.historyList{
+   height: 100%;
+  box-sizing: border-box;
+}
+
+.history{
+  height: 100rpx;
+  width:100%;
+  box-sizing: border-box;
+  margin-bottom: 1px;
+  background-color: #fff;
+}
+
+
+.history .itemTop{
+  height: 100rpx;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  font-size: 30rpx;
+  text-align: center;
+   -webkit-transition: all 0.4s;
+ transition: all 0.4s;
+ 
+}
+
+.itemTop .item{
+  flex:1;
+}
+
+.del{
+  position: absolute;
+  left: 100%;
+  background-color: red;
+  width:120rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+  color: #fff;
+  font-size: 34rpx;
+}
+
+/* .touch-move-active{
+    -webkit-transform: translateX(-120rpx);
+    transform: translateX(-120rpx);
+} */

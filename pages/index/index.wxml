@@ -1,0 +1,40 @@
+<!--index.wxml-->
+ <view class="container">
+
+  <view class="basket">
+    <view class="addAll">
+    <checkbox-group bindchange="checkedALL">
+        <checkbox checked='{{checkedAllBtn}}' value="{{checkedAll}}" class='checkBox'/>全选
+     </checkbox-group>
+    </view> 
+    <view class="addBtn" bindtap="priceList">
+        加入报价单
+    </view>
+  </view> 
+<view  class="productList" scroll-y>
+<checkbox-group bindchange="checkboxChange">
+    <view class="item" wx:key="{{index}}"  wx:for="{{list}}">
+   <view  class="empty pl" >
+    <label class="radio" hidden="{{edit}}">
+        <checkbox checked='{{checkedAll}}' value="{{item.productId}}"/>
+    </label>
+   </view>
+     <view class='img' data-id="{{item.productId}}" bindtap="toDetails">
+        <image class='' src="{{item.mainPicUrl}}"></image>
+     </view>
+     <view class='productRight' data-id="{{item.productId}}" bindtap="toDetails">
+        <text class="name">{{item.productName}}{{item.productVersion?"-"+item.productVersion:""}}</text>
+         <view class="activePower">{{item.activePower?item.activePower+"KW":""}}</view>
+        <view class='priceBox'>
+            <text class="price">{{"¥ "+item.price}}</text>
+            <text class="maketPrice">{{"¥ "+item.marketPrice}}</text>
+        </view>
+      </view>
+      <view  class="empty pr" data-id="{{item.productId}}" bindtap="toDetails">
+        <image class='icon' src="../images/right.png"></image>
+      </view>
+  </view>
+</checkbox-group>
+<view class='pb'></view>
+  </view>
+ </view> 

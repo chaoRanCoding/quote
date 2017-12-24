@@ -1,0 +1,42 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/history/history",
+    "pages/user/user",
+    "pages/priceList/priceList",
+    "pages/detail/details",
+    "pages/quotationDetail/quotationDetails"
+    
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "惠充电报价系统",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "backgroundColor": "#f5f5f5",
+    "selectedColor": "#3DCAE6",
+    "color": "#cdcdcd",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "pages/images/cart1.png",
+        "selectedIconPath": "pages/images/cart.png"
+      },
+      {
+        "pagePath": "pages/priceList/priceList",
+        "text": "报价单",
+        "iconPath": "pages/images/list.png",
+        "selectedIconPath": "pages/images/list1.png"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "text": "个人中心",
+        "iconPath": "pages/images/userCenter.png",
+        "selectedIconPath": "pages/images/userCenter1.png"
+      }
+    ]
+  }
+}

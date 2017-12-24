@@ -1,0 +1,96 @@
+/* pages/detail/details.wxss */
+.swiper-box{
+  width: 100%;
+  height: 400rpx;
+}
+
+.slide-image{
+  width:100%;
+  height: 100%;
+}
+.infoTitle{
+    display: block;
+    height: 150rpx;
+    width: 100%;
+    background-color: #fff;
+    text-align: center;
+    line-height: 150rpx;
+    margin-bottom: 1px;
+}
+
+.infoItem{
+    width: 100%;
+    padding: 30rpx;
+    border-bottom: 1px solid #F5F5F5;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+}
+
+.itemName{
+  padding:0 30rpx;
+  width: 200rpx;
+}
+
+.itemCont{
+  flex: 1;
+  padding: 0 30rpx;
+}
+
+.product{
+  height:200rpx;
+  margin: 1px 0; 
+  background-color: #fff;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction:row;
+}
+
+.productLeft{
+  flex:4;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding: 30rpx;
+}
+
+.productRight{
+  flex:1;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.unitPrice{
+  flex:1;
+  font-size: 32rpx;
+  color: red;
+}
+
+.maketPrice{
+  flex:1;
+  font-size: 30rpx;
+  text-decoration:line-through;
+  color: #ccc;
+  margin-top: 2rpx;
+}
+
+.productName{
+  flex:1;
+}
+
+.productPrice{
+  flex:1;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.add{
+  height: 50rpx;
+  width: 50rpx;
+}
